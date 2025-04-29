@@ -15,11 +15,17 @@
         /* Estilos personalizados podem ser adicionados aqui, se necessário,
            mas vamos priorizar as classes do Bootstrap */
         body {
-            background-color: #f8f9fa; /* Um cinza claro de fundo do Bootstrap */
+            background-color: #93bccc; /* Um cinza claro de fundo do Bootstrap */
         }
         .card-title strong { /* Estilo para o nome do item dentro do card */
-             color: #0d6efd; /* Azul padrão do Bootstrap */
+             color: #93bccc; /* Azul padrão do Bootstrap */
         }
+        .btn {
+            color: #93bccc;
+            border-color: #93bccc;
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -44,7 +50,7 @@
                                    <small class="text-muted fw-normal"> (ID: <%= item.id %>)</small> <!-- text-muted para ID mais sutil -->
                                </h5>
                                <p class="card-text flex-grow-1"><%= item.descricao %></p> <!-- flex-grow-1 para empurrar o botão/link para baixo -->
-                               <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a> <!-- Exemplo de botão/link no card -->
+                               <a href="#" class="btn btn-sm mt-auto">Ver Detalhes</a> <!-- Exemplo de botão/link no card -->
                            </div>
                        </div>
                     </div>
