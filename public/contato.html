@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #0077cc;
+            padding: 10px 16px;
+            border-radius: 8px;
+            width: fit-content;
+            transition: background-color 0.3s ease;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-links a:hover {
+            background-color: #005fa3;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 16px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
-    <p>Bem-vindo(a) ao Contato</p>
+    <h1>Bem-vindo(a) ao Contato</h1>
     <p>Essa é a página de contato do seu aplicativo.</p>
     <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
-    <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
-    <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
-    <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
-    <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+
+    <div class="nav-links">
+        <a href="/lista">Ir à lista</a>
+        <a href="/contato">Ir à página de contato</a>
+        <a href="/sobre">Ir à página de sobre</a>
+
+        <button onclick="history.back()">Voltar à página anterior</button>
+    </div>
 </body>
 </html>
