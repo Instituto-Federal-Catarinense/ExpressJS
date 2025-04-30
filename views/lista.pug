@@ -16,10 +16,15 @@ html(lang="pt-br")
     .container.mt-4
       h1.display-5.mb-4= titulo
 
+      // Barra de pesquisa
+      .input-group.mb-4
+        span.input-group-text 🔍
+        input#searchInput.form-control(type="text", placeholder="Pesquisar letras...")
+
       if itensParaView && itensParaView.length > 0
         .row
           each item in itensParaView
-            .col-md-6.col-lg-4.mb-3
+            .col-md-6.col-lg-4.mb-3.item-card(data-nome=item.nome)
               .card.h-100
                 .card-body.d-flex.flex-column
                   h5.card-title
@@ -36,3 +41,14 @@ html(lang="pt-br")
       a.btn.btn-secondary(href="/") Voltar para a página inicial
 
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz", crossorigin="anonymous")
+    
+    // Script de filtro
+    script.
+      document.getElementById('searchInput').addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+        const cards = document.querySelectorAll('.item-card');
+        cards.forEach(card => {
+          const nome = card.getAttribute('data-nome').toLowerCase();
+          card.style.display = nome.includes(filter) ? '' : 'none';
+        });
+      });
