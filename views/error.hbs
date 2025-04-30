@@ -1,0 +1,12 @@
+{{!-- views/error.hbs --}}
+{{! Indica que este arquivo usa o layout chamado "layout.hbs" --}}
+{{! Isso assume que está usando express-handlebars com layouts habilitados --}}
+{{#extend "layout"}}
+
+{{#content "body"}}
+<h1>{{message}}</h1>
+<h2>{{error.status}}</h2>
+<pre>{{error.stack}}</pre>
+{{/content}}
+
+{{/extend}}
