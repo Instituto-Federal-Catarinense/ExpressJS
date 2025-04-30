@@ -1,17 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Inicial</title>
+    <style>
+        /* Reset básico de margin e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        h1 {
+            color: #93bccc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Texto principal */
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        p a {
+            color: #93bccc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: #93bccc;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Bem-vindo(a) ao Contato</p>
-    <p>Essa é a página de contato do seu aplicativo.</p>
-    <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
-    <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
-    <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
-    <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
-    <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+    <div class="container">
+        <h1>Bem-vindo(a) ao Contato</h1>
+        <p>Essa é a página contato do seu aplicativo.</p>
+        <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
+        <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
+        <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
+        <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
+        <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+    </div>
+
+    <footer>
+        <p>© 2025 Código da Lia. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
