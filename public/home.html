@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <p>Bem-vindo(a) ao Home</p>
-    <p>Essa é a página inicial do seu aplicativo.</p>
-    <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
-    <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
-    <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
-    <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
-    <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+    <div class="container">
+        <h1>Bem-vindo(a) ao Home</h1>
+        <p>Essa é a página inicial do seu aplicativo.</p>
+        <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
+        <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
+        <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
+        <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
+        <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+    </div>
 </body>
 </html>
