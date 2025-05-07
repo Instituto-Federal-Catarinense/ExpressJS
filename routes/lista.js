@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
       { id: 24, nome: 'Item Omega', descricao: 'Omega (Ω, ω) representa resistência elétrica e frequência angular.' },
     ];
   
-    // Renderizar a view 'lista.ejs' passando os dados
+    // Renderizar a view 'lista.hbs' passando os dados
     res.render('lista', {
       titulo: 'Minha Lista Dinâmica',
       itensParaView: meusItens
