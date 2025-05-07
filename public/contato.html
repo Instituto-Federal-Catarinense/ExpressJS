@@ -32,26 +32,11 @@
             width: fit-content;
             transition: background-color 0.3s ease;
         }
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
 
         .nav-links a:hover {
             background-color: #005fa3;
         }
-        button {
-            margin-top: 20px;
-            padding: 10px 16px;
-            background-color: #0077cc;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+        
         button:hover {
             background-color: #005fa3;
         }
@@ -65,7 +50,8 @@
     <div class="nav-links">
         <a href="/lista">Ir à lista</a>
         <a href="/contato">Ir à página de contato</a>
-        <a href="/sobre">Ir à página de sobre</a>
+        <a href="/sobre">Ir à página sobre</a>
+        <a href="/users">Ir à página de usuários</a>
 
         <button onclick="history.back()">Voltar à página anterior</button>
     </div>
