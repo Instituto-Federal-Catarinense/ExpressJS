@@ -1,0 +1,11 @@
+{{!-- Extende o layout principal --}}
+{{#> layout}}
+
+{{!-- Bloco de conteúdo --}}
+{{#block "content"}}
+<h1>{{message}}</h1>
+<h2>{{error.status}}</h2>
+<pre>{{error.stack}}</pre>
+{{/block}}
+
+{{/layout}} <!-- Fechando corretamente o layout -->
