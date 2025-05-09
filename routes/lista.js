@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       { id: 5, nome: 'Item Epsilon', descricao: 'Outro item.' },
       { id: 6, nome: 'Item Zeta', descricao: 'Outro item.' },
       { id: 7, nome: 'Item Eta', descricao: 'Penultimo item.' },
-      { id: 8, nome: 'Item Theta', descricao: 'Último item.' },
+      { id: 8, nome: 'Item Theta', descricao: 'Último item.' }
     ];
   
     // 4. Renderizar a view 'lista.ejs' passando os dados
