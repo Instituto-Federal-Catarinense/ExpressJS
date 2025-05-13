@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
       { id: 2, nome: 'Item Beta', descricao: 'O segundo item da nossa lista dinâmica.' },
       { id: 3, nome: 'Item Gama', descricao: 'Terceiro e último item exemplo.' },
       { id: 4, nome: 'Item Delta', descricao: 'Mais um item para testar.' },
-      { id: 4, nome: 'Item Delta', descricao: 'Mais um item para testar.' },
       { id: 5, nome: 'Item Épsilon', descricao: 'Mais um item para testar.' },
       { id: 6, nome: 'Item Zeta', descricao: 'Mais um item para testar.' },
       { id: 7, nome: 'Item Eta', descricao: 'Mais um item para testar.' },
