@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const clientesRouter = require('./routes/clientes');
 const listaRouter = require('./routes/lista');
+const produtosRouter = require('./routes/produtos');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clientes', clientesRouter);
 app.use('/lista', listaRouter);
+app.use('/produtos', produtosRouter);
 
 // Tratamento de erro 404
 app.use((req, res, next) => {
