@@ -8,9 +8,9 @@ router.get('/', (req, res) => {
     { id: 1, nome: 'Vôlei', descricao: 'Descrição detalhada do Item Alfa.' },
     { id: 2, nome: 'Futsal', descricao: 'O segundo item da nossa lista dinâmica.' },
     { id: 3, nome: 'Badminton', descricao: 'Terceiro e último item exemplo.' },
-    { id: 4, nome: 'Handebol', descricao: 'Mais um item para testar.' }
-    { id: 4, nome: 'Tênis', descricao: 'Outro item para testar.' }
-    { id: 4, nome: 'Futbol', descricao: 'Mais um item para testar.' }
+    { id: 4, nome: 'Handebol', descricao: 'Mais um item para testar.' },
+    { id: 5, nome: 'Tênis', descricao: 'Outro item para testar.' },
+    { id: 6, nome: 'Futbol', descricao: 'Mais um item para testar.' }
   ];
 
   // 4. Renderizar a view 'lista.ejs' passando os dados
