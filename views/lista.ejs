@@ -1,0 +1,18 @@
+
+<h1>Lista de Itens</h1>
+
+<% if (itensParaView) { %>
+  <% if (itensParaView.length) { %>
+    <ul>
+      <% itensParaView.forEach(function(item) { %>
+        <li>
+          <%= item.name %> - <%= item.id %>
+        </li>
+        <% }); %>
+    </ul>
+    <% } else { %>
+      <p>Não há itens para mostrar.</p>
+      <% } %>
+        <% } else { %>
+          <p>Não há dados disponíveis.</p>
+          <% } %>
