@@ -3,11 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var app = express();
+
+// Servir arquivos estáticos (como imagens) a partir da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var clientesRouter = require('./routes/clientes');
 var listaRouter = require('./routes/lista');
+var comidasRouter = require('./routes/comida');
+var produtosRouter = require("./routes/produtos");
 
 
 var app = express();
@@ -26,6 +32,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clientes', clientesRouter);
 app.use('/lista', listaRouter);
+app.use('/comidas', comidasRouter);
+app.use("/produtos", produtosRouter);
 
 
 // catch 404 and forward to error handler
