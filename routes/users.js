@@ -14,13 +14,9 @@ router.get('/', (req, res) => {
     { id: 8, nome: 'Item pindaiba', time: 'Nautico' }
   ];
 
-  // 4. Renderizar a view 'lista.ejs' passando os dados
-  // O segundo argumento de res.render() é um objeto.
-  // As chaves desse objeto (ex: 'titulo', 'itensParaView') se tornam
-  // variáveis disponíveis dentro do template EJS.
-  res.render('usuarios', {
-    titulo: 'meus usuários',
-    usuariosParaView: meusUsuarios // Passando o array para a view
+  res.render('users', {
+    titulo: 'meus users',
+    usersParaView: meusUsers // Passando o array para a view
   });
 });
 

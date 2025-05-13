@@ -30,20 +30,20 @@
             <%= titulo %>
         </h1>
 
-        <% if (usuariosParaView && usuariosParaView.length> 0) { %>
+        <% if (usersParaView && usersParaView.length> 0) { %>
             <div class="row">
-                <% usuariosParaView.forEach(function(usuario) { %>
+                <% usersParaView.forEach(function(user) { %>
                     <div class="col-md-6 col-lg-4 mb-3">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">
                                     <strong>
-                                        <%= usuario.nome %>
+                                        <%= user.nome %>
                                     </strong>
-                                    <small class="text-muted fw-normal"> (ID: <%= usuario.id %>)</small>
+                                    <small class="text-muted fw-normal"> (ID: <%= user.id %>)</small>
                                 </h5>
                                 <p class="card-text flex-grow-1">
-                                    <%= usuario.descricao %>
+                                    <%= user.descricao %>
                                 </p>
                                 <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a>
                             </div>
