@@ -27,17 +27,17 @@
     <div class="container mt-4">
         <h1 class="display-5 mb-4">{{titulo}}</h1>
 
-        {{#if usuariosParaView.length}}
+        {{#if produtosParaView.length}}
         <div class="row">
-            {{#each usuariosParaView}}
+            {{#each produtosParaView}}
             <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">
-                            <strong>{{nome}}</strong>
+                            <strong>{{produto}}</strong>
                             <small class="text-muted fw-normal"> (ID: {{id}})</small>
                         </h5>
-                        <p class="card-text flex-grow-1">{{Time}}</p>
+                        <p class="card-text flex-grow-1">{{valor}}</p>
                         <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a>
                     </div>
                 </div>
