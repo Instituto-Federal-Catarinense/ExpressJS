@@ -18,7 +18,7 @@
         background-color: #f8f9fa; /* Um cinza claro de fundo do Bootstrap */
     }
     .card-title strong { /* Estilo para o nome do item dentro do card */
-         color: #fd8d0d; /* Azul padrão do Bootstrap */
+         color: #fd0d0d; /* Azul padrão do Bootstrap */
     }
   </style>
 </head>
@@ -30,10 +30,10 @@
     <h1 class="display-5 mb-4">{{titulo}}</h1>
 
     {{!-- Verificando se o array 'itensParaView' existe e tem elementos --}}
-    {{#if usuariosParaView.length}}
+    {{#if produtosParaView.length}}
       <div class="row">
         {{!-- Iterando sobre o array 'itensParaView' --}}
-        {{#each usuariosParaView}}
+        {{#each produtosParaView}}
           {{!-- Usando um Card do Bootstrap para cada item --}}
           {{!-- mb-3 adiciona margem inferior entre os cards --}}
           <div class="col-md-6 col-lg-4 mb-3">
@@ -43,7 +43,8 @@
                   <strong>{{nome}}</strong>
                   <small class="text-muted fw-normal"> (ID: {{id}})</small>
                 </h5>
-                <p class="card-text flex-grow-1">{{descricao}}</p>
+                <p class="card-text flex-grow-1">{{tipo}}</p>
+                <p class="card-text flex-grow-1">{{preco}}</p>
                 <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a>
               </div>
             </div>
