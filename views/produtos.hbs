@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>{{titulo}}</title>
+
+    <style>
+        body {
+            background-color: #f0f2f5;
+            /* Cor de fundo mais clara e suave */
+        }
+
+        .card-title strong {
+            color: #d63384;
+            /* Cor mais vibrante para o título do cartão */
+            font-size: 1.5rem;
+            /* Tamanho maior para o nome */
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 250px;
+            /* Imagem maior para dar mais destaque */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+            /* Aumenta mais a imagem quando passar o mouse */
+        }
+
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            /* Sombra mais forte */
+            background-color: #ffffff;
+            /* Fundo branco para destacar */
+            border: 1px solid #ddd;
+            /* Borda mais sutil */
+        }
+
+        .card-body {
+            padding: 2rem;
+            /* Mais padding para melhorar o espaçamento interno */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            /* Azul mais forte para os botões */
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            /* Aumenta o tamanho do texto do botão */
+            text-transform: uppercase;
+            /* Maiúsculas para dar mais impacto */
+            letter-spacing: 1px;
+            /* Espaçamento entre letras */
+            transition: background-color 0.3s, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #5c00b3;
+            /* Azul mais escuro no hover */
+            transform: translateY(-2px);
+            /* Efeito de elevação */
+        }
+
+        .alert-warning {
+            font-size: 1.2rem;
+            /* Tamanho de texto maior para o alerta */
+            background-color: #fff3cd;
+            color: #856404;
+            /* Cor mais visível para o alerta */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 4rem 1rem;
+            /* Maior padding para a área de conteúdo */
+        }
+
+        .display-5 {
+            font-weight: 700;
+            font-size: 3rem;
+            /* Tamanho maior do título principal */
+            color: #343a40;
+            /* Cor de texto mais sóbria */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        hr {
+            border-color: #ccc;
+            margin-top: 30px;
+            border-width: 2px;
+        }
+
+        .col-md-6,
+        .col-lg-4 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-6:hover,
+        .col-lg-4:hover {
+            transform: translateY(-10px);
+            /* Efeito de elevação para os cartões */
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            /* Sombra mais forte no hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-5 mb-4">{{titulo}}</h1>
+
+        {{#if produtosParaView.length}}
+        <div class="row">
+            {{#each produtosParaView}}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <!-- Imagem destacada -->
+                    <img src="{{this.foto}}" class="card-img-top" alt="Foto de {{this.nome}}">
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            <strong>{{this.nome}}</strong>
+                            <small class="text-muted fw-normal"> ID: {{this.id}}</small>
+                        </h5>
+                        <p class="card-text flex-grow-1">{{this.descricao}}</p>
+                        <a href="#" class="btn btn-primary mt-auto">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{else}}
+        <div class="alert alert-warning" role="alert">
+            Nenhum item para exibir no momento.
+        </div>
+        {{/if}}
+
+        <hr class="my-4">
+
+        <a href="/" class="btn btn-outline-secondary btn-lg">Voltar para a página inicial</a>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS (inclui Popper) (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

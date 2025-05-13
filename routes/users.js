@@ -16,9 +16,9 @@ router.get('/', (req, res) => {
     // O segundo argumento de res.render() é um objeto.
     // As chaves desse objeto (ex: 'titulo', 'itensParaView') se tornam
     // variáveis disponíveis dentro do template EJS.
-    res.render('lista', {
+    res.render('users', {
       titulo: 'Minha Lista Usuarios',
-      itensParaView: meusUsuarios // Passando o array para a view
+      usersParaView: meusUsuarios // Passando o array para a view
     });
   });
 
