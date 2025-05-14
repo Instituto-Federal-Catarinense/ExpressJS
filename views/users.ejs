@@ -25,17 +25,17 @@
       <input id="searchInput" class="form-control" type="text" placeholder="Pesquisar letras...">
     </div>
 
-    <% if (itensParaView && itensParaView.length > 0) { %>
+    <% if (usuariosParaView && usuariosParaView.length > 0) { %>
       <div class="row">
-        <% itensParaView.forEach(function(item) { %>
-          <div class="col-md-6 col-lg-4 mb-3 item-card" data-nome="<%= item.nome %>">
+        <% usuariosParaView.forEach(function(usuario) { %>
+          <div class="col-md-6 col-lg-4 mb-3 item-card" data-nome="<%= usuario.nome %>">
             <div class="card h-100">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">
-                  <strong><%= item.nome %></strong>
-                  <small class="text-muted fw-normal">&nbsp;(ID: <%= item.id %>)</small>
+                  <strong><%= usuario.nome %></strong>
+                  <small class="text-muted fw-normal">&nbsp;(ID: <%= usuario.id %>)</small>
                 </h5>
-                <p class="card-text flex-grow-1"><%= item.descricao %></p>
+                <p class="card-text flex-grow-1"><%= usuario.perfil %></p>
                 <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a>
               </div>
             </div>

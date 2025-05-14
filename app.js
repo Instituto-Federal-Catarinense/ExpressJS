@@ -1,3 +1,4 @@
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,7 +9,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var clientesRouter = require('./routes/clientes');
 var listaRouter = require('./routes/lista');
+var produtosRouter = require('./routes/produtos');
 
+var app = express();
+
+// Serve arquivos estáticos da pasta 'public'
+app.use('/imagens', express.static(path.join(__dirname, 'imagens')));
 
 var app = express();
 
@@ -26,6 +32,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clientes', clientesRouter);
 app.use('/lista', listaRouter);
+app.use('/produtos', produtosRouter);
 
 
 // catch 404 and forward to error handler

@@ -1,17 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre - História do Alfabeto Grego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 16px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
-    <p>Bem-vindo(a) ao Sobre</p>
-    <p>Essa é a página de sobre do seu aplicativo.</p>
-    <p>Você pode adicionar mais conteúdo aqui conforme necessário.</p>
-    <p>Para voltar à lista, clique <a href="/lista">aqui</a>.</p>
-    <p>Para voltar à página inicial, clique <a href="/">aqui</a>.</p>
-    <p>Para voltar à página de contato, clique <a href="/contato">aqui</a>.</p>
-    <p>Para voltar à página de sobre, clique <a href="/sobre">aqui</a>.</p>
+    <div class="fade-in">
+        <p>Bem-vindo(a) ao Sobre</p>
+        <p>Essa é a página de sobre do seu aplicativo.</p>
+
+        <h2>História do Alfabeto Grego</h2>
+        <p>O alfabeto grego é um dos sistemas de escrita mais antigos do mundo ocidental, com origem por volta do século VIII a.C. Ele foi derivado do alfabeto fenício, mas trouxe inovações importantes, como a introdução de vogais.</p>
+        <p>Inicialmente, havia variações regionais, mas o alfabeto foi padronizado na forma jônica, com 24 letras. Hoje, ele é amplamente utilizado em contextos científicos e matemáticos.</p>
+        <p>Se quiser saber mais, acesse este <a href="https://pt.wikipedia.org/wiki/Alfabeto_grego" target="_blank">artigo completo na Wikipédia</a>.</p>
+
+        
+        <button onclick="history.back()">Voltar à página anterior</button>
+    </div>
 </body>
 </html>

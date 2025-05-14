@@ -22,20 +22,23 @@
     <!-- Barra de pesquisa -->
     <div class="input-group mb-4">
       <span class="input-group-text">🔍</span>
-      <input id="searchInput" class="form-control" type="text" placeholder="Pesquisar letras...">
+      <input id="searchInput" class="form-control" type="text" placeholder="Pesquisar produtos...">
     </div>
 
-    <% if (itensParaView && itensParaView.length > 0) { %>
+    <% if (produtosParaView && produtosParaView.length > 0) { %>
       <div class="row">
-        <% itensParaView.forEach(function(item) { %>
-          <div class="col-md-6 col-lg-4 mb-3 item-card" data-nome="<%= item.nome %>">
+        <% produtosParaView.forEach(function(produto) { %>
+          <div class="col-md-6 col-lg-4 mb-3 item-card" data-nome="<%= produto.nome %>">
             <div class="card h-100">
+              <!-- Imagem do Produto -->
+              <img src="<%= produto.imagem %>" class="card-img-top" alt="<%= produto.nome %>">
+
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">
-                  <strong><%= item.nome %></strong>
-                  <small class="text-muted fw-normal">&nbsp;(ID: <%= item.id %>)</small>
+                  <strong><%= produto.nome %></strong>
+                  <small class="text-muted fw-normal">&nbsp;(ID: <%= produto.id %>)</small>
                 </h5>
-                <p class="card-text flex-grow-1"><%= item.descricao %></p>
+                <p class="card-text flex-grow-1"><%= produto.descricao %></p>
                 <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a>
               </div>
             </div>
@@ -44,7 +47,7 @@
       </div>
     <% } else { %>
       <div class="alert alert-warning" role="alert">
-        Nenhum item para exibir no momento.
+        Nenhum produto para exibir no momento.
       </div>
     <% } %>
 
