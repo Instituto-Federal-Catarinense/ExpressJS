@@ -6,3 +6,24 @@ body {
 a {
   color: #fa71e5;
 }
+
+.img-padrao {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  width: 220px;
+}
