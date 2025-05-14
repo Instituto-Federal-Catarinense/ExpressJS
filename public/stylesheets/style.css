@@ -1,8 +1,56 @@
+/* Estilos gerais para o body */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 30px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f1f8ff; /* Fundo claro, azul suave */
+  color: #333; /* Cor do texto */
+  line-height: 1.6; /* Melhora o espaçamento entre linhas */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Faz com que o conteúdo ocupe a altura total da tela */
 }
 
+/* Centraliza o título */
+h1 {
+  font-size: 2.5em; /* Tamanho maior para o título */
+  color: #003366; /* Azul escuro para o título */
+  background-color: #cce4ff; /* Caixa azul clara de fundo */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px; /* Espaço abaixo do título */
+  font-weight: bold;
+  text-align: center; /* Centraliza o título */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Centraliza o conteúdo das frases */
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  text-align: center; /* Centraliza o texto das frases */
+  width: 100%; /* Faz com que as frases se estendam pela largura */
+  display: flex;
+  justify-content: center; /* Alinha as frases e links no centro */
+  align-items: center; /* Alinha os itens no meio verticalmente */
+}
+
+/* Estilo para os links */
 a {
-  color: #00B7FF;
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #4da6ff; /* Azul claro para o fundo da caixa */
+  color: white; /* Cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado */
+  border-radius: 5px;
+  margin-left: 10px; /* Espaço entre o texto e o link */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+a:hover {
+  background-color: #3385cc; /* Azul mais escuro quando passar o mouse */
 }
