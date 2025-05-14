@@ -6,3 +6,50 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Estilo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Estilização da grid de produtos */
+.produto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsividade */
+  gap: 20px;
+  padding: 20px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.produto-grid li {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.produto-grid img {
+  max-width: 100%;  /* Redimensiona para manter a proporcionalidade */
+  height: auto;     /* Mantém a altura proporcional */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.produto-grid strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
