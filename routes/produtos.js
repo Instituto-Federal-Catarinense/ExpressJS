@@ -5,67 +5,68 @@ var router = express.Router();
 router.get('/', (req, res) => {
     // Dados dinâmicos (nosso vetor de elementos)
     const meusItens = [
-        { 
-            id: 1, 
-            nome: 'Caminhão', 
-            descricao: 'Caminhões legais e bonitões',
-            imagem: 'https://fotos-estradao-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2022/05/10120845/Actros-2653-13-1160x775.jpg' // URL direta da imagem
-        },
-        { 
-            id: 2, 
-            nome: 'Signo', 
-            descricao: 'Oróscopos e essas coisas',
-            imagem: 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/02/07/1094822831-mitos-e-verdades-sobre-os-signos-shutterstock.jpg' // URL direta da imagem
-        },
-        { 
-            id: 3, 
-            nome: 'Palácio', 
-            descricao: 'Viver em um palácio deve ser show',
-            imagem: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Palacio_Fronteira_-_Lisbon_%287721187114%29.jpg' // URL direta da imagem
-        },
-        { 
-            id: 4, 
-            nome: 'Camarão', 
-            descricao: 'À milanesa ou alho e óleo',
-            imagem: 'https://static.itdg.com.br/images/auto-auto/695e7cae035ad377dcfbb63fb7a4db19/receitas-com-camarao.jpg' // URL direta da imagem
-        },
-        { 
-            id: 5, 
-            nome: 'Letra ipsilon', 
-            descricao: 'Letra mais sem sentido do alfabeto',
-            imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99gAMWUPQN9yorvyq7UjRfgkUnB3QtO4JMQ&s' // URL direta da imagem
-        },
-        { 
-            id: 6, 
-            nome: 'Porteiro', 
-            descricao: 'Uma das profissões mais históricas',
-            imagem: 'https://www.rrsecurity.com.br/img/services/porteiro.jpg' // URL direta da imagem
-        },
-        { 
-            id: 7, 
-            nome: 'Etanol', 
-            descricao: 'Um dos piores combustiveis',
-            imagem: 'https://static.manualdaquimica.com/conteudo/images/no-brasil-materia-prima-para-producao-etanol-cana-acucar-547f8416cddb8.jpg' // URL direta da imagem
-        },
-        { 
-            id: 8, 
-            nome: 'Utah', 
-            descricao: 'Uma das cidades dos Estados Unidos',
-            imagem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Utah_in_United_States.svg/330px-Utah_in_United_States.svg.png' // URL direta da imagem
-        },
-        { 
-            id: 9, 
-            nome: 'J', 
-            descricao: 'Letra J.',
-            imagem: 'https://i.pinimg.com/originals/9b/4c/bb/9b4cbb56547f4bea0718a06f65fb525d.jpg' // URL direta da imagem
-        },
-        { 
-            id: 10, 
-            nome: 'Importação de mamíferos', 
-            descricao: 'Tá tendo bastante até',
-            imagem: 'https://www.shutterstock.com/image-vector/handpainted-watercolor-illustrations-diverse-wild-260nw-2598872001.jpg' // URL direta da imagem
-        }
-    ];
+        [  
+            {  
+                id: 1,  
+                nome: 'Teclado Musical',  
+                descricao: 'Harmonia em tons digitais',  
+                imagem: 'https://cdn.awsli.com.br/2500x2500/2495/2495408/produto/220289870305ca1195d.jpg'  
+            },  
+            {  
+                id: 2,  
+                nome: 'Jardim Subaquático',  
+                descricao: 'Ecossistemas em movimento constante',  
+                imagem: 'https://thumbs.dreamstime.com/b/jardim-subaqu%C3%A1tico-97521025.jpg'  
+            },  
+            {  
+                id: 3,  
+                nome: 'Foguetes de Papel',  
+                descricao: 'Viagens imaginárias infantis',  
+                imagem: 'https://previews.123rf.com/images/dariako/dariako2001/dariako200100329/137227854-foguete-de-papel-estrelas-de-artesanato-origami-crian%C3%A7a-jogar-inova%C3%A7%C3%A3o-tecnol%C3%B3gica.jpg'  
+            },  
+            {  
+                id: 4,  
+                nome: 'Pintura Abstrata',  
+                descricao: 'Cores sem forma definida',  
+                imagem: 'https://lobopopart.com.br/wp-content/uploads/2020/06/Arte-Abstrata.jpg'  
+            },  
+            {  
+                id: 5,  
+                nome: 'Café Espacial',  
+                descricao: 'Grãos cultivados em órbita',  
+                imagem: 'https://cafeespacial.com/wp-content/uploads/2019/02/cafe13_web.jpg'  
+            },  
+            {  
+                id: 6,  
+                nome: 'Dança das Sombras',  
+                descricao: 'Coreografia noturna silenciosa',  
+                imagem: 'https://thumbs.dreamstime.com/z/sombras-da-dan%C3%A7a-7119687.jpg'  
+            },  
+            {  
+                id: 7,  
+                nome: 'Livro Flutuante',  
+                descricao: 'Páginas que desafiam gravidade',  
+                imagem: 'https://m.media-amazon.com/images/I/51w3hbJzmWL._AC_UF894,1000_QL80_.jpg'  
+            },  
+            {  
+                id: 8,  
+                nome: 'Relógio de Areia Invertido',  
+                descricao: 'Tempo fluindo para cima',  
+                imagem: 'https://m.media-amazon.com/images/I/61ZE+RWMX4L._AC_UF894,1000_QL80_.jpg'  
+            },  
+            {  
+                id: 9,  
+                nome: 'Esculturas de Vento',  
+                descricao: 'Arte moldada pelo ar',  
+                imagem: 'https://cdn-cpoco.nitrocdn.com/tULlXHbPhGEWZxjaPaXQirQiEfCfDEJV/assets/images/optimized/rev-8dbb47f/www.cnstatue.com/wp-content/uploads/2020/01/metal-kinetic-wind-sculpture.jpg'  
+            },  
+            {  
+                id: 10,  
+                nome: 'Chuva de Diamantes',  
+                descricao: 'Preciosidade em gotas cristalinas',  
+                imagem: 'https://gemanativa.com/wp-content/uploads/2024/02/chuva-de-diamantes-1.jpg'  
+            }  
+        ];  
 
     // Renderizar a view 'lista.ejs' passando os dados
     res.render('produtos', {
