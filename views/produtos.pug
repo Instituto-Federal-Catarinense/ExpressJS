@@ -17,6 +17,10 @@ html(lang="pt-br")
       .card-title strong {
         color: #0d6efd;
       }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
   body
     .container.mt-4
       h1.display-5.mb-4= titulo
@@ -26,6 +30,7 @@ html(lang="pt-br")
           each Produto in ProdutosParaView
             .col-md-6.col-lg-4.mb-3
               .card.h-100
+                img.card-img-top(src=Produto.imagem, alt=Produto.nome)
                 .card-body.d-flex.flex-column
                   h5.card-title
                     strong= Produto.nome
