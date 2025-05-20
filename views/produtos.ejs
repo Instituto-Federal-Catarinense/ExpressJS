@@ -30,20 +30,22 @@
         <h1 class="display-5 mb-4"><%= titulo %></h1>
 
         <!-- Verificando se o array 'itensParaView' existe e tem elementos -->
-        <% if (itensParaView && itensParaView.length > 0) { %>
+        <% if (produtosParaView && produtosParaView.length > 0) { %>
             <div class="row"> <!-- Opcional: usar row/col para layout futuro, mas cards já são blocos -->
                 <!-- Iterando sobre o array 'itensParaView' -->
-                <% itensParaView.forEach(item => { %>
+                <% produtosParaView.forEach(produtos => { %>
                     <!-- Usando um Card do Bootstrap para cada item -->
                     <!-- mb-3 adiciona margem inferior entre os cards -->
                     <div class="col-md-6 col-lg-4 mb-3"> <!-- Colunas para layout em grid (opcional, mas bom para responsividade) -->
                        <div class="card h-100"> <!-- h-100 faz os cards terem a mesma altura na linha -->
+                        <img src="/imagens/<%= produtos.imagem %>" class="card-img-top" alt="<%= produtos.nome %>">
+
                            <div class="card-body d-flex flex-column"> <!-- d-flex e flex-column para alinhar conteúdo -->
                                <h5 class="card-title">
-                                   <strong><%= item.nome %></strong>
-                                   <small class="text-muted fw-normal"> (ID: <%= item.id %>)</small> <!-- text-muted para ID mais sutil -->
+                                   <strong><%= produtos.nome %></strong>
+                                   <small class="text-muted fw-normal"> (ID: <%= produtos.id %>)</small> <!-- text-muted para ID mais sutil -->
                                </h5>
-                               <p class="card-text flex-grow-1"><%= item.descricao %></p> <!-- flex-grow-1 para empurrar o botão/link para baixo -->
+                               <p class="card-text flex-grow-1"> Marca:<%= produtos.marca %></p> <!-- flex-grow-1 para empurrar o botão/link para baixo -->
                                <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a> <!-- Exemplo de botão/link no card -->
                            </div>
                        </div>
