@@ -18,8 +18,9 @@
             background-color: #f8f9fa; /* Um cinza claro de fundo do Bootstrap */
         }
         .card-title strong { /* Estilo para o nome do item dentro do card */
-             color: #0d6efd; /* Azul padrão do Bootstrap */
+             color: #f80476; /* Azul padrão do Bootstrap */
         }
+
     </style>
 </head>
 <body>
@@ -43,8 +44,10 @@
                                    <strong><%= item.nome %></strong>
                                    <small class="text-muted fw-normal"> (ID: <%= item.id %>)</small> <!-- text-muted para ID mais sutil -->
                                </h5>
+                               <img class="h-75" src=<%= item.url %>>
                                <p class="card-text flex-grow-1"><%= item.descricao %></p> <!-- flex-grow-1 para empurrar o botão/link para baixo -->
-                               <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a> <!-- Exemplo de botão/link no card -->
+                               <a href="#" class="btn btn-sm btn-outline-primary mt-auto">Ver Detalhes</a> 
+                               <p> (R$: <%= item.preco %>)</p> 
                            </div>
                        </div>
                     </div>
